@@ -6,9 +6,9 @@ $.getJSON( "/getSpace", function( data ) {
         var html = "";
         html += '<tr>';
         html += '<th scope="row">' + element.filesystem + '</th>';
-        html += '<td>' + getReadableFileSizeString(element.blocks) + '</td>';
-        html += '<td>' + getReadableFileSizeString(element.used) + '</td>';
-        html += '<td>' + getReadableFileSizeString(element.available) + '</td>';
+        html += '<td>' + getReadableFileSizeString(element.blocks * 1000) + '</td>';
+        html += '<td>' + getReadableFileSizeString(element.used * 1000) + '</td>';
+        html += '<td>' + getReadableFileSizeString(element.available * 1000) + '</td>';
         html += '<td><div class="progress">';
         html += '<div class="progress-bar" role="progressbar" style="width: '+procent+'%;" aria-valuenow="'+procent+'" aria-valuemin="0" aria-valuemax="100">'+procent+'%</div>';
         html += '</div></td>';
