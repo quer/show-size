@@ -9,14 +9,7 @@ app.get('/', function (req, res) {
 });
 app.get('/getSpace', (req, res) => {
 	d.getDrives(function(err, aDrives) {
-		var list = [];
-		for (var i = 0; i < aDrives.length; i++) {
-			const element = aDrives[i];
-			if(element.mounted == "/" || element.mounted == "/home/mukuduk/2tb" || element.mounted == "/home/mukuduk/1500gb"){
-				list.push(element);
-			}
-		}
-		res.send(list);
+		res.send(aDrives);
 	});
 })
 
