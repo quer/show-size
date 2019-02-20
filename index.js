@@ -16,7 +16,7 @@ app.get('/getSpace', (req, res) => {
 				list.push(element);
 			}
 		}
-		res.send(aDrives);
+		res.send(list);
 	});
 })
 
